@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery返回顶部demo</title>
+    <style type="text/css">
+        .goTop >img{
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .goTop{
+            position: fixed;
+            right : 20px;
+            bottom : 20px;
+        }
+    </style>
+</head>
+<body>
+<p>
+    1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+    <img src="https://3vj-render.3vjia.com//UpFile_Render/C00000022/DesignSchemeRenderFile/201803/31/10156296/b61b1c250f834a80b358ec475e359b15.jpg?x-oss-process=image/resize,m_fixed,h_235,w_315&v=3.0.0.0.20180418">
+    1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+    1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+    <img src="https://3vj-render.3vjia.com//UpFile_Render/C00000022/DesignSchemeRenderFile/201803/31/10156296/b61b1c250f834a80b358ec475e359b15.jpg?x-oss-process=image/resize,m_fixed,h_235,w_315&v=3.0.0.0.20180418">
+    1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+    1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+    1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+    1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+    1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+    <img src="https://3vj-render.3vjia.com//UpFile_Render/C00000022/DesignSchemeRenderFile/201803/31/10156296/b61b1c250f834a80b358ec475e359b15.jpg?x-oss-process=image/resize,m_fixed,h_235,w_315&v=3.0.0.0.20180418">
+    1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+    <img src="https://3vj-render.3vjia.com//UpFile_Render/C00000022/DesignSchemeRenderFile/201803/31/10156296/b61b1c250f834a80b358ec475e359b15.jpg?x-oss-process=image/resize,m_fixed,h_235,w_315&v=3.0.0.0.20180418">
+    1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+    1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+    1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+</p>
+
+<div class="goTop" id="js-go_top"><img src="icon_top.png" alt="回到顶部图片"></div>
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="GoToTop.js"></script>
+<script>
+    //示例
+    $('#js-go_top').gotoTop({
+        offset : 500, //距离顶部的位置
+        speed : 300, //移动到顶部的速度
+        /*     iconSpeed : 300, //icon动画样式的速度*/
+        animationShow : {
+            'transform' : 'translate(0,0)',
+            'transition': 'transform .5s ease-in-out'
+        }, //icon动画样式显示时
+        animationHide : {
+            'transform' : 'translate(80px,0)',
+            'transition': 'transform .5s ease-in-out'
+        } //icon动画样式隐藏时
+    });
+</script>
+</body>
+</html>
